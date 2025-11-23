@@ -14,9 +14,11 @@
             <li>Go HTML templates</li>
             <li>Serving static CSS/JS</li>
             <li>A small JSON API at <code>/greet</code></li>
+            <li>A new JSON API at <code>/double</code> (NEW)</li>
         </ul>
 
         <section id="greetBox" class="card">
+            <h2>Greeting API</h2>
             <label for="name">Enter name (optional):</label>
             <input id="name" placeholder="Lord" />
             <button id="sayHi">Get Greeting</button>
@@ -24,10 +26,16 @@
             <div id="result" class="result">Try clicking "Get Greeting" or visit <a href="/greet">/greet</a></div>
         </section>
 
-        <!-- <footer>
-            <small>Built for fun </small>
-        </footer> -->
-    </main>
+        <section id="doubleBox" class="card" style="margin-top: 20px;">
+            <h2>Double API</h2>
+            <label for="numberInput">Enter number (optional):</label>
+            <input id="numberInput" placeholder="42" type="number" value="10" />
+            <button id="doDouble">Calculate Double</button>
+
+            <div id="doubleResult" class="result">Try clicking "Calculate Double" or visit <a href="/double?number=10">/double?number=10</a></div>
+        </section>
+
+        </main>
 
     <script src="/static/js/app.js"></script>
 </body>
