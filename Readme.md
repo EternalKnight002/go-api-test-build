@@ -1,4 +1,4 @@
-# go-playground
+# go-Greetings-api
 
 Tiny Go web server: template rendering + static assets + a small JSON API.
 
