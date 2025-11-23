@@ -11,7 +11,6 @@ It serves a single-page application at the root path (`/`) which utilizes the tw
 * **Greeting API**: A simple JSON API available at `/greet`.
 * **Double API**: A new JSON API available at `/double` for integer calculation.
 
-## Quick Start
 
 ### Prerequisites
 
