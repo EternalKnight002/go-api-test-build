@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <main>
+        <h1>👋 Welcome to the Go Playground Server</h1>
+        <p>This tiny server demonstrates:</p>
+        <ul>
+            <li>Go HTML templates</li>
+            <li>Serving static CSS/JS</li>
+            <li>A small JSON API at <code>/greet</code></li>
+        </ul>
+
+        <section id="greetBox" class="card">
+            <label for="name">Enter name (optional):</label>
+            <input id="name" placeholder="Lord" />
+            <button id="sayHi">Get Greeting</button>
+
+            <div id="result" class="result">Try clicking "Get Greeting" or visit <a href="/greet">/greet</a></div>
+        </section>
+
+        <!-- <footer>
+            <small>Built for fun </small>
+        </footer> -->
+    </main>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
