@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const subtractBtn = document.getElementById("doSubtract");
   const subtractResult = document.getElementById("subtractResult");
 
-  //  Pet Name API elements (NEW FUN ENDPOINT)
+  //  Pet Name API elements
   const adjectiveInput = document.getElementById("adjectiveInput");
   const animalInput = document.getElementById("animalInput");
   const petNameBtn = document.getElementById("getPetName");
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Function to call the /petname API (NEW FUN ENDPOINT)
+  // Function to call the /petname API (FIXED: JSON keys are now correctly accessed as j.animal and j.petName)
   async function callPetName(adjective, animal) {
     const adj = adjective.trim();
     const ani = animal.trim();
@@ -92,7 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       const j = await res.json();
       // Display the result from the API
-      petNameResult.textContent = `Your new pet name for the ${j.Animal} is: ${j.PetName}`;
+      // FIX: Changed j.Animal to j.animal and j.PetName to j.petName
+      petNameResult.textContent = `Your new pet name for the ${j.animal} is: ${j.petName}`;
     } catch (err) {
       petNameResult.textContent = "Network or server error";
       console.error(err);
@@ -114,10 +115,11 @@ document.addEventListener("DOMContentLoaded", function () {
     callSubtract(n1Input.value.trim(), n2Input.value.trim());
   });
 
-  // Event listener for the Pet Name API button (NEW)
+  // Event listener for the Pet Name API button
   petNameBtn.addEventListener("click", function () {
     callPetName(adjectiveInput.value.trim(), animalInput.value.trim());
   });
 
-  
+  // optional: auto-run once with default name
+  // callGreet("");
 });
